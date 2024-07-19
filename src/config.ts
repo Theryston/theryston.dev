@@ -20,7 +20,7 @@ const buildConfig = () => {
           "Blog sobre programação, com tutoriais, projetos e dicas para desenvolvedores de todos os níveis. Explore o mundo da tecnologia e aprenda novas habilidades",
       },
     },
-    ogImageSecret: process.env.OG_IMAGE_SECRET,
+    ogImageSecret: process.env.OG_IMAGE_SECRET || "",
     wisp: { blogId },
   };
 };
