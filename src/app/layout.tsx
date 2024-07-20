@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import GoogleAdsense from "@/components/GoogleAdsense";
 
 const fontSans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -48,6 +49,8 @@ export default function RootLayout({
           <main>{children}</main>
         </ThemeProvider>
       </body>
+
+      <GoogleAdsense />
     </html>
   );
 }
