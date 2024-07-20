@@ -22,8 +22,8 @@ export const metadata: Metadata = {
       signOgImageUrl({
         title: config.blog.name,
       }),
-    ]
-  }
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-6xl m-auto",

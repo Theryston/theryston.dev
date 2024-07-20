@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { GetPostsResult } from "@/lib/wisp";
 import { formatDate } from "date-fns";
+import { ptBR } from "date-fns/locale";
 import Image from "next/image";
 import Link from "next/link";
 import { FunctionComponent } from "react";
@@ -26,7 +27,9 @@ export const BlogPostPreview: FunctionComponent<{
           <Link href={`/blog/${post.slug}`}>{post.title}</Link>
         </h2>
         <div className="prose lg:prose-lg italic tracking-tighter text-muted-foreground">
-          {formatDate(post.publishedAt || post.updatedAt, "dd MMMM yyyy")}
+          {formatDate(post.publishedAt || post.updatedAt, "dd MMMM yyyy", {
+            locale: ptBR,
+          })}
         </div>
         <div className="prose lg:prose-lg leading-relaxed md:text-lg line-clamp-4 text-muted-foreground">
           {post.description}

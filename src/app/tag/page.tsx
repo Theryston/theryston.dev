@@ -8,13 +8,13 @@ import Link from "next/link";
 export async function generateMetadata() {
   return {
     title: "Tags",
-    description: "Different blog post categories",
+    description: "Diferentes categorias de postagens do blog",
     openGraph: {
       title: "Tags",
-      description: "Different blog post categories",
+      description: "Diferentes categorias de postagens do blog",
       images: [
         signOgImageUrl({
-          title: "Blog Post Categories",
+          title: "Categorias",
           brand: config.blog.name,
         }),
       ],
@@ -30,7 +30,7 @@ export default async function Page() {
       <Header />
       <div className="mt-20 mb-12 text-center">
         <h1 className="mb-2 text-5xl font-bold">Tags</h1>
-        <p className="text-lg opacity-50">List of all tags</p>
+        <p className="text-lg opacity-50">Lista de todas as tags</p>
       </div>
       <div className="my-10 max-w-6xl text-balance text-center text-xl mb-48">
         {result.tags.map((tag) => (

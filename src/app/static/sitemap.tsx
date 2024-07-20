@@ -4,6 +4,9 @@ import urlJoin from "url-join";
 
 const staticPaths = ["about"];
 
+export const revalidate = 60;
+export const dynamic = "force-dynamic";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = staticPaths.map((path) => ({
     url: urlJoin(config.baseUrl, path),
