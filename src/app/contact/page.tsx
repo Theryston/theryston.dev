@@ -1,6 +1,26 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { config } from "@/config";
+import { signOgImageUrl } from "@/lib/og-image";
 import Link from "next/link";
+
+export async function generateMetadata() {
+  return {
+    title: "Contato",
+    description: "Entre em contato com Theryston",
+    openGraph: {
+      title: "Contato",
+      description: "Entre em contato com Theryston",
+      images: [
+        signOgImageUrl({
+          title: "Theryston",
+          label: "Contato",
+          brand: config.blog.name,
+        }),
+      ],
+    },
+  };
+}
 
 export default function Page() {
   return (

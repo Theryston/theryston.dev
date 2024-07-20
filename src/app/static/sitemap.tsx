@@ -2,7 +2,7 @@ import { config } from "@/config";
 import type { MetadataRoute } from "next";
 import urlJoin from "url-join";
 
-const staticPaths = ["about"];
+const staticPaths = ["about", "contact"];
 
 export const revalidate = 60;
 export const dynamic = "force-dynamic";
