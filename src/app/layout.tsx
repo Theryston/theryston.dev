@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import GoogleAdsense from "@/components/GoogleAdsense";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const fontSans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -34,6 +35,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <GoogleTagManager gtmId="GTM-5SF6NCXS" />
+
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-6xl m-auto",
